@@ -25,10 +25,10 @@ var firebaseConfig = {
       var collegeid = getInputVal('collegeid');
       var phone = getInputVal('phone');
       var email = getInputVal('email');
-      var laptop= getInputval('laptop');
-      var ppt= getInputVal('ppt');
+    //   var laptop= getInputval('laptop');
+    //   var ppt= getInputVal('ppt');
 
-      saveMessages(name, collegeid, phone, email,laptop,ppt);
+      saveMessages(name, collegeid, phone, email);
 
       document.querySelector('.alert').style.display = 'block';
       setTimeout(function(){
@@ -43,7 +43,7 @@ var firebaseConfig = {
       return document.getElementById(id).value;
   }
 
-  function saveMessages(name, collegeid, phone, email,laptop,ppt){
+  function saveMessages(name, collegeid, phone, email){
       var newMessagesRef = messagesRef.push();
 
       newMessagesRef.set({
