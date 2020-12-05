@@ -25,8 +25,8 @@ var firebaseConfig = {
       var collegeid = getInputVal('collegeid');
       var phone = getInputVal('phone');
       var email = getInputVal('email');
-      var laptop= getInputval('laptop');
-      var ppt= getInputVal('ppt');
+    //   var laptop= getInputval('laptop');
+    //   var ppt= getInputVal('ppt');
 
       saveMessages(name, collegeid, phone, email);
 
