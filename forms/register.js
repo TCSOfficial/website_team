@@ -50,9 +50,9 @@ var firebaseConfig = {
           name: name,
           collegeid: collegeid,
           phone: phone,
-          email: email,
-          laptop: laptop,
-          ppt: ppt
+          email: email
+        //   laptop: laptop,
+        //   ppt: ppt
 
       });
   }
