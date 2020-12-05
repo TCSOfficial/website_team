@@ -12,44 +12,53 @@ var firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 
-  var database = firebase.database();
+  // Reference messages collection
+var messagesRef = firebase.database().ref('messages');
 
-  var messagesRef = database.ref('registerform');
-  
-  document.getElementById('registerform').addEventListener('submit',submitform);
+// Listen for form submit
+document.getElementById('contactForm').addEventListener('submit', submitForm);
 
-  function submitform(e){
-      e.preventDefault();
+// Submit form
+function submitForm(e){
+  e.preventDefault();
 
-      var name = getInputVal('name');
-      var collegeid = getInputVal('collegeid');
-      var phone = getInputVal('phone');
-      var email = getInputVal('email');
-    //   var laptop= getInputval('laptop');
-    //   var ppt= getInputVal('ppt');
+  // Get values
+  var name = getInputVal('name');
+  var company = getInputVal('company');
+  var email = getInputVal('email');
+  var phone = getInputVal('phone');
+  var message = getInputVal('message');
+  var message1 = getInputVal('message1');
 
-      saveMessages(name, collegeid, phone, email);
+  // Save message
+  saveMessage(name, company, email, phone, message, message1);
 
-      document.querySelector('.alert').style.display = 'block';
-      setTimeout(function(){
-        document.querySelector('.alert').style.display = 'none';
+  // Show alert
+  document.querySelector('.alert').style.display = 'block';
 
-      },3000);
-      document.getElementById('registerform').reset();
+  // Hide alert after 3 seconds
+  setTimeout(function(){
+    document.querySelector('.alert').style.display = 'none';
+  },3000);
 
-  }
+  // Clear form
+  document.getElementById('contactForm').reset();
+}
 
-  function getInputVal(id){
-      return document.getElementById(id).value;
-  }
+// Function to get get form values
+function getInputVal(id){
+  return document.getElementById(id).value;
+}
 
-  function saveMessages(name, collegeid, phone, email){
-      var newMessagesRef = messagesRef.push();
-
-      newMessagesRef.set({
-          name: name,
-          collegeid: collegeid,
-          phone: phone,
-          email: email
-      });
-  }
+// Save message to firebase
+function saveMessage(name, company, email, phone, message,message1){
+  var newMessageRef = messagesRef.push();
+  newMessageRef.set({
+    Name: name,
+    CollegeId:company,
+    Email:email,
+    Phone:phone,
+    Laptop:message,
+    PPT: message1
+  });
+}
