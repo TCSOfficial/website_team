@@ -67,6 +67,12 @@
         margin: 0px 0px;
       }
     }
+    *, ::after, ::before {
+    box-sizing: border-box;
+    padding: 1px;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e2e8f0;
   </style>
 
 
@@ -270,26 +276,25 @@
                   resize: vertical;"required>
                 </p>
                 <p>
-                  <label style="color: white;">Do you have Laptop?</label>
+                  <label style="color: white;">Do you have Laptop? Yes/No</label>
                   <input type="text" name="message" id="message" required>
                 </p>
                 <p>
-                  <label style="color: white;">Do you know how to make Powerpoint Presentation?</label>
+                  <label style="color: white;">Do you know how to make Powerpoint Presentation? Yes/No</label>
                   <input type="text" name="message1" id="message1" required>
                 </p>
                 <div class="alert">Your are successfully registered.</div>
                 <p class="full">
                   <button type="submit" class="btn btn-primary">Submit</button>
                 </p>
+              <p></p>
               </form>
-               <!-- <div class="jumbotron">
+              <!-- <div class="jumbotron">
                 <h1>Recruitment 2k20</h1>
                 <p class="lead"></p>
                 <a class="btn btn-lg btn-primary" href="https://forms.gle/DmYSoW35DDYCaGM37" role="button">View navbar docs »</a>
               </div>  -->
-            
             </div>
-          
         </div>
         <!-- <div class="container">
           <h1 class="brand"><span>Acme</span> Web Design</h1>
@@ -334,8 +339,6 @@
           </div>
         </div> -->
         </div>
-        
-        <hr class="solid" >
         <div class="col-12 text-center mt-4">
             <a class="ml-3 text-gray-500 mr-3 " href="mailto:tcs.tit@gmail.com?subject=" style="color: white;">
           <i class="fa fa-2x fa-google-plus" aria-hidden="true" style="color: white;"></i>
