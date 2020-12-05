@@ -244,23 +244,38 @@
                 </p>
                 <p>
                   <label style="color: white;">CollegeId</label>
-                  <input type="text" name="company" id="company">
+                  <input type="text" name="company" id="company" pattern="^[A-Z0-9a-z]{7}" required>
                 </p>
                 <p>
                   <label style="color: white;">Email Address</label>
-                  <input type="text" name="email" id="email" required>
+                  <br>
+                  <input type="email" name="email" id="email" style="width: 100%;
+                  padding: 12px;
+                  border: 1px solid #ccc;
+                  border-radius: 4px;
+                  box-sizing: border-box;
+                  margin-top: 6px;
+                  margin-bottom: 16px;
+                  resize: vertical;" required>
                 </p>
                 <p>
                   <label style="color: white;">Whatsapp Number</label>
-                  <input type="tel" name="phone" id="phone" pattern="[789][0-9]{9}">
+                  <input type="tel" name="phone" id="phone" pattern="[789][0-9]{9}" style="width: 100%;
+                  padding: 12px;
+                  border: 1px solid #ccc;
+                  border-radius: 4px;
+                  box-sizing: border-box;
+                  margin-top: 6px;
+                  margin-bottom: 16px;
+                  resize: vertical;"required>
                 </p>
                 <p>
                   <label style="color: white;">Do you have Laptop?</label>
-                  <input type="text" name="message" id="message">
+                  <input type="text" name="message" id="message" required>
                 </p>
                 <p>
                   <label style="color: white;">Do you know how to make Powerpoint Presentation?</label>
-                  <input type="text" name="message1" id="message1">
+                  <input type="text" name="message1" id="message1" required>
                 </p>
                 <div class="alert">Your are successfully registered.</div>
                 <p class="full">
