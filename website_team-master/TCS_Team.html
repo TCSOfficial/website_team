@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Google Fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Open Sans" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <!--TailwindCss-->
+        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <link href="./bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="./styles.css" rel="stylesheet">
+        <link rel="icon" href="white on black.png" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Alice">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+        
+        <title>Members</title>
+
+        <style>
+            *
+            {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            .header-text
+            {
+                text-align: center;
+                font-size: xx-large;
+                margin: 30px auto 20px;
+            }
+
+            h1.text
+            {
+                text-align: center;
+                font-family: 'Alice';
+                color: white;
+                font-size: calc(2rem + 2vw);
+            }
+            
+            @keyframes theheading 
+            {
+                0% {opacity: 1;}
+                50% {opacity:0.5;}
+                100% {opacity: 1;}    
+            }
+
+            .all-team-data
+            {
+                margin: 50px 5px 0px 10px;
+            }
+            .all-team-data li
+            {
+                position: relative;
+                animation-delay: 10s;
+                animation: theheading 5s;
+                color: white;
+                position: relative;
+                font-size: calc(1rem + 1vw);
+                font-family: 'Montserrat';
+                text-decoration: none;
+            }
+
+            .flip-card-section
+            {
+                align-items: center;
+                margin: 50px 0px 0px 140px;
+            }
+
+            .flip-card 
+            {
+                margin-right: 50px;
+                margin-bottom: 40px;
+                display: inline-block;
+                background-color: transparent;
+                width: 250px;
+                height: 330px;
+            }
+            .flip-card-inner {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                transition: transform 0.6s;
+                transform-style: preserve-3d;
+                /*box-shadow: 3px 4px 6px  rgb(231, 227, 227);*/
+            }
+            .flip-card:hover .flip-card-inner {
+                transform: rotateY(180deg);
+            }
+
+            .flip-card-front, .flip-card-back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+            }
+
+            .flip-card-front {
+                font-family: 'Open Sans';
+                padding: 2px;
+                box-shadow: 3px 4px 6px  rgba(231, 227, 227);
+                background-color: white;
+                color: black;
+            }
+
+            .flip-card-back {
+                font-family: 'Open Sans';
+                padding: 130px 0px 0px 15px;
+                font-size: large;
+                box-shadow: 3px 0px 6px rgba(231, 227, 227);
+                background-color: black;
+                color: white;
+                transform: rotateY(180deg);
+                text-align: center;
+            }
+            .container {
+                border-top: 1px solid black;
+                padding: 4px 16px 4px 16px;
+                text-align: center;
+            }
+
+            @media screen and (max-width: 1100px)
+            {
+                .header-text
+                {
+                    text-align: center;
+                }
+                .flip-card-section
+                {
+                    align-items:center;
+                    align-self: center;
+                    align-content: center;
+                    margin: 30px 0px 5px 140px;
+                }
+                .flip-card
+                {
+                    width: 220px;
+                    height: 330px;
+                    margin-right: 30px;
+                    align-items: center;
+                    align-self: center;
+                    align-content: center;
+                }
+                .all-team-data
+                {
+                    margin-left: auto;
+                    margin-right: 0px;
+                }
+            }
+
+            @media screen and (max-width: 1000px)
+            {
+                .header-text
+                {
+                    text-align: center;
+                }
+                .flip-card-section
+                {
+                    align-items:center;
+                    align-self: center;
+                    align-content: center;
+                    margin: 30px 0px 5px 120px;
+                }
+                .flip-card
+                {
+                    width: 220px;
+                    height: 330px;
+                    margin-right: 30px;
+                    align-items: center;
+                    align-self: center;
+                    align-content: center;
+                }
+                .all-team-data
+                {
+                    margin-left: auto;
+                    margin-right: 0px;
+                }
+            }
+
+
+
+
+            @media screen and (max-width: 900px)
+            {
+                .header-text
+                {
+                    text-align: center;
+                }
+                .flip-card-section
+                {
+                    align-items:center;
+                    align-self: center;
+                    align-content: center;
+                    margin: 30px 0px 5px 90px;
+                }
+                .flip-card
+                {
+                    width: 220px;
+                    height: 330px;
+                    margin-right: 30px;
+                    align-items: center;
+                    align-self: center;
+                    align-content: center;
+                }
+                .all-team-data
+                {
+                    margin-left: auto;
+                    margin-right: 0px;
+                }
+            }
+
+            @media screen and (max-width: 850px)
+            {
+                .header-text
+                {
+                    text-align: center;
+                }
+                .flip-card-section
+                {
+                    align-items:center;
+                    align-self: center;
+                    align-content: center;
+                    margin: 30px 0px 5px 160px;
+                }
+                .flip-card
+                {
+                    width: 220px;
+                    height: 330px;
+                    margin-right: 30px;
+                    align-items: center;
+                    align-self: center;
+                    align-content: center;
+                }
+                .all-team-data
+                {
+                    margin-left: auto;
+                    margin-right: 0px;
+                }
+            }
+
+            
+            @media screen and (max-width: 750px)
+            {
+                .header-text
+                {
+                    text-align: center;
+                }
+                .flip-card-section
+                {
+                    align-items:center;
+                    align-self: center;
+                    align-content: center;
+                    margin: 30px 0px 5px 145px;
+                }
+                .flip-card
+                {
+                    width: 220px;
+                    height: 330px;
+                    margin-right: 30px;
+                    align-items: center;
+                    align-self: center;
+                    align-content: center;
+                }
+                .all-team-data
+                {
+                    margin-left: auto;
+                    margin-right: 0px;
+                }
+            }
+
+            @media screen and (max-width: 650px)
+            {
+                .header-text
+                {
+                    text-align: center;
+                }
+                .flip-card-section
+                {
+                    align-items:center;
+                    align-self: center;
+                    align-content: center;
+                    margin: 30px 0px 5px 90px;
+                }
+                .flip-card
+                {
+                    width: 220px;
+                    height: 330px;
+                    margin-right: 30px;
+                    align-items: center;
+                    align-self: center;
+                    align-content: center;
+                }
+                .all-team-data
+                {
+                    margin-left: auto;
+                    margin-right: 0px;
+                }
+            }
+
+            
+            @media screen and (max-width: 600px)
+            {
+                .header-text
+                {
+                    text-align: center;
+                }
+                .flip-card-section
+                {
+                    align-items:center;
+                    align-self: center;
+                    align-content: center;
+                    margin: 30px 0px 5px 60px;
+                }
+                .flip-card
+                {
+                    width: 220px;
+                    height: 330px;
+                    margin-right: 30px;
+                    align-items: center;
+                    align-self: center;
+                    align-content: center;
+                }
+                .all-team-data
+                {
+                    margin-left: auto;
+                    margin-right: 0px;
+                }
+            }
+
+            
+            @media screen and (max-width: 565px)
+            {
+                .header-text
+                {
+                    text-align: center;
+                }
+                .flip-card-section
+                {
+                    align-items:center;
+                    align-self: center;
+                    align-content: center;
+                    margin: 30px 0px 5px 150px;
+                }
+                .flip-card
+                {
+                    width: 220px;
+                    height: 330px;
+                    margin-right: 30px;
+                    align-items: center;
+                    align-self: center;
+                    align-content: center;
+                }
+                .all-team-data
+                {
+                    margin-left: auto;
+                    margin-right: 0px;
+                }
+            }
+
+
+            @media screen and (max-width: 565px)
+            {
+                .header-text
+                {
+                    text-align: center;
+                }
+                .flip-card-section
+                {
+                    align-items:center;
+                    align-self: center;
+                    align-content: center;
+                    margin: 30px 0px 5px 150px;
+                }
+                .flip-card
+                {
+                    width: 220px;
+                    height: 330px;
+                    margin-right: 30px;
+                    align-items: center;
+                    align-self: center;
+                    align-content: center;
+                }
+                .all-team-data
+                {
+                    margin-left: auto;
+                    margin-right: 0px;
+                }
+            }
+
+            @media screen and (max-width: 450px)
+            {
+                .header-text
+                {
+                    text-align: center;
+                }
+                .flip-card-section
+                {
+                    align-items:center;
+                    align-self: center;
+                    align-content: center;
+                    margin: 30px 0px 5px 110px;
+                }
+                .flip-card
+                {
+                    width: 220px;
+                    height: 330px;
+                    margin-right: 0px;
+                    align-items: center;
+                    align-self: center;
+                    align-content: center;
+                }
+                .all-team-data
+                {
+                    margin-left: auto;
+                    margin-right: 0px;
+                }
+            }
+
+
+            @media screen and (max-width: 400px)
+            {
+                .header-text
+                {
+                    text-align: center;
+                }
+                .flip-card-section
+                {
+                    align-items:center;
+                    align-self: center;
+                    align-content: center;
+                    margin: 30px 0px 5px 20%;
+                }
+                .flip-card
+                {
+                    width: 220px;
+                    height: 330px;
+                    margin-right: 0px;
+                    align-items: center;
+                    align-self: center;
+                    align-content: center;
+                }
+                .all-team-data
+                {
+                    margin-left: 5px;
+                    margin-right: 0px;
+                }
+            }
+
+            @media screen and (max-width: 350px)
+            {
+                .header-text
+                {
+                    text-align: center;
+                }
+                .flip-card-section
+                {
+                    align-items:center;
+                    align-self: center;
+                    align-content: center;
+                    margin: 30px 0px 5px 50px;
+                }
+                .flip-card
+                {
+                    width: 220px;
+                    height: 330px;
+                    margin-right: 0px;
+                    align-items: center;
+                    align-self: center;
+                    align-content: center;
+                }
+                .all-team-data
+                {
+                    margin-left: 5px;
+                    margin-right: 0px;
+                }
+            }
+
+            @media screen and (max-width: 300px)
+            {
+                .header-text
+                {
+                    text-align: center;
+                }
+                .flip-card-section
+                {
+                    align-items:center;
+                    align-self: center;
+                    align-content: center;
+                    margin: 30px 0px 5px 50px;
+                }
+                .flip-card
+                {
+                    width: 200px;
+                    height: 330px;
+                    margin-right: 0px;
+                    align-items: center;
+                    align-self: center;
+                    align-content: center;
+                }
+                .all-team-data
+                {
+                    margin-left: 4px;
+                    margin-right: 0px;
+                }
+            }
+
+            .containerall
+            {
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+</head>
+    
+    <body id="id1">
+        <script type="text/javascript">
+            var arr = ['12.jpg', '3.jpg', '14.jpg', '13.jpg', '7.jpg', '5.jpg', '6.jpg', '1.jpg', '10.jpg', '4.jpg', '8.jpg', '9.jpg'];
+            var x = Math.floor(Math.random() * 12);
+            var str1 = "image/";
+            var final = str1.concat(arr[x]);
+            document.body.background = final;
+        </script>
+<div class="containerall">
+    <nav class="navbar sidebar-collapsed navbar-expand-lg sticky-top lineargradnt" id="navbar1">
+        <a id="logo" class="navbar-brand" style="color: white;" href="index.html"><img class="logo1"
+            src="White Transparent.png" alt="" loading="lazy"></a>
+        <button style="outline: unset;" id="btncol" class="navbar-toggler ml-auto hidden-sm-up float-xs-right"
+          style="float:right;" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+          <i style="color: white;" class="fa fa-bars"></i>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto ">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                About Us
+              </a>
+              <div id="drp" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" id="elee" href="about_us.html">Our Story</a>
+                <a class="dropdown-item" id="elee" href="mentors.html">Mentors</a>
+                <a class="dropdown-item active" id="elee" href="TCS_Team.html">Members</a>
+                <a class="dropdown-item" id="elee" href="Postholders page.html">Post Holders</a>
+                <a class="dropdown-item" id="elee" href="alumni.html">Alumni</a>
+                <a class="dropdown-item" id="elee" href="developers.html">Developers</a>
+    
+              </div>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="Gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="Placement.html">Placements</a></li>
+            <li class="nav-item"><a class="nav-link" href="Downloads.html">Downloads</a></li>
+            <li class="nav-item">
+          <a href="event-register.html">
+            <button type="button" class="btn btn-outline-primary btn-sm mt-1">Event Registration</button>
+          </a>
+        </li>
+          </ul>
+        </div>
+      </nav>
+        
+        <div class="header-text">
+            <h1 class="text">Our Members</h1>
+        </div>
+
+        <p style="color:white;text-align:center;font-family: 'Alice';font-size:calc(1.5rem + 1vw); padding-top: 0px;">
+            <i>Gems of society,<br>that are priceless</i>
+        </p>
+        
+        <div class="all-team-data">
+            <ul>
+                <li>|| Final Year :: </li>
+            </ul>
+            <section class="flip-card-section">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Sakshi kaushik.jpg" alt="Sakshi kaushik" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Sakshi kaushik</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Sakshi kaushik</p> 
+                            <p>C.S.E.</p> 
+                            <p>President</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card" >
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/mandeep singh.jpg" alt="Mandeep Singh" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Mandeep Singh</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Mandeep Singh</p> 
+                            <p>C.S.E.</p> 
+                            <p>Vice-President</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Aman.jpeg" alt="Aman Singh" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Aman Singh</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Aman Singh</p> 
+                            <p>C.S.E.</p> 
+                            <p>Technical Head</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Divya chandna.jpg" alt="Divya chandna" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Divya chandna</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Divya chandna</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Geetanshu.jpeg" alt="Geetanshu" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Geetanshu</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Geetanshu</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Deepanshu garg.jpeg" alt="Deepanshu Garg" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Deepanshu Garg</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Deepanshu Garg</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Saksham Nagpal.jpg" alt="Saksham Nagpal" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Saksham Nagpal</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Saksham Nagpal</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Muskan Asija.jpg" alt="Muskan Asija" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Muskan Asija</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Muskan Asija</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Tamanna Garg.jpg" alt="Tamanna Garg" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Tamanna Garg</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Tamanna Garg</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Bharat.jpg" alt="Bharat" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Bharat</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Bharat</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Sumit Manderna.jpg" alt="Sumit Manderna" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Sumit Manderna</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Sumit Manderna</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Sofia Arora.jpg" alt="Sofia Arora" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Sofia Arora</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Sofia Arora</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Deepanshu Bansal.png" alt="Deepanshu Bansal" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Deepanshu Bansal</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Deepanshu Bansal</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Prachi Arora.png" alt="Prachi Arora" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Prachi Arora</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Prachi Arora</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/RUCHI.jpg" alt="Ruchi" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Ruchi</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Ruchi</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Sakshi Rajput.jpg" alt="Sakshi Rajput" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Sakshi Rajput</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Sakshi Rajput</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Purvi.jpeg" alt="Purvi" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Purvi</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Purvi</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Gurman.jpeg" alt="Gurman" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Gurman</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Gurman</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Rimpy.jpeg" alt="Rimpy" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Rimpy</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Rimpy</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Shivam Sharma.jpg" alt="Shivam Sharma" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Shivam Sharma</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Shivam Sharma</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Punnay Mittal.jpg" alt="Punnay Mittal" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Punnay Mittal</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Punnay Mittal</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Apsara Raheja.jpg" alt="Apsara Raheja" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Apsara Raheja</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Apsara Raheja</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    
+
+        <div class="all-team-data">
+            <ul>
+                <li>|| Pre-Final Year :: </li>
+            </ul>
+            <section class="flip-card-section">
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Anuj Sharma.jpg" alt="Anuj Sharma" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Anuj Sharma</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Anuj Sharma</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/mohit saini.jpeg" alt="Mohit saini" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Mohit Saini</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Mohit saini</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Rishika Goyal.jpg" alt="Rishika Goyal" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Rishika Goyal</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Rishika Goyal</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Sneh Soni.jpg" alt="Sneh Soni" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Sneh Soni</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Sneh Soni</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Khushi Aggarwal.jpg" alt="Khushi Aggarwal" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Khushi Aggarwal</b></h6>
+                                </div>
+                        </div> 
+                        <div class="flip-card-back">
+                            <p>Khsuhi Aggarwal</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Karishma Bansal.jpg" alt="Karishma Bansal" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Karishma Bansal</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Karishma Bansal</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Madhur Verma.jpg" alt="Madhur Verma" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Madhur Verma</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Madhur Verma</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Ankit Chauhan.jpg" alt="Ankit Chauhan" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Ankit Chauhan</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Ankit Chauhan</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Mahima bhardwaj.jpeg" alt="Mahima bhardwaj" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Mahima bhardwaj</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Mahima bhardwaj</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Mansi.jpg" alt="Mansi" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Mansi</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Mansi</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Ishita Kaushik.jpg" alt="Ishita Kaushik" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Ishita Kaushik</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Ishita Kaushik</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Pallavi.jpg" alt="Pallavi" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Pallavi</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Pallavi</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Mukul Attri.jpg" alt="Mukul Attri" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Mukul Attri</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Mukul Attri</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Samridhi Mahajan.jpg" alt="Samridhi Mahajan" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Samridhi Mahajan</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Samridhi Mahajan</p> 
+                            <p>C.S.E.</C></p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Usha Sharma.jpg" alt="Usha Sharma" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Usha Sharma</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Usha Sharma</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Vanshika Kakkar.jpg" alt="Vanshika Kakkar" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Vanshika Kakkar</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Vanshika Kakkar</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Aayush Lakhera.jpg" alt="Aayush Lakhera" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Aayush Lakhera</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Aayush Lakhera</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="all-team-data">
+            <ul>
+                <li>|| Second Year :: </li>
+            </ul>
+            <section class="flip-card-section">
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Vijayant.jpg" alt="Vijayant" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Vijayant</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Vijayant</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Mohit.jpg" alt="Mohit" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Mohit</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Mohit</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Nikhil Verma.jpg" alt="Nikhil Verma" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Nikhil Verma</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Nikhil Verma</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Raghav.jpeg" alt="Raghav" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Raghav</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Raghav</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Shivam.jpeg" alt="Shivam" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Shivam</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Shivam</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Ketan Sharma.jpg" alt="Ketan Sharma" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Ketan Sharma</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Ketan Sharma</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/kavya Gakhar.jpeg" alt="kavya Gakhar" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>kavya Gakhar</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>kavya Gakhar</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Chirag Mehtani.jpg" alt="Chirag Mehtani" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Chirag Mehtani</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Chirag Mehtani</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Ashish.jpg" alt="Ashish" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Ashish</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Ashish</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Abhishek.jpg" alt="Abhishek" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Abhishek</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Abhishek</p> 
+                            <p>E.C.E.</p> 
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Aryan Sardana.jpg" alt="Aryan Sardana" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Aryan Sardana</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Aryan Sardana</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Neeraj Beriwal.jpeg" alt="Neeraj Beriwal" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Neeraj Beriwal</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Neeraj Beriwal</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/jatin Gulia.jpg" alt="Jatin Gulia" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Jatin Gulia</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Jatin Gulia</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Naman Rohilla.jpg" alt="Naman Rohilla" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Naman Rohilla</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Naman Rohilla</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="Members Images/Aarchi Jindal.jpg" alt="Aarchi Jindal" style="width:300px;height:300px;">
+                                <div class="container">
+                                    <h6><b>Aarchi Jindal</b></h6>
+                                </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Aarchi Jindal</p> 
+                            <p>C.S.E.</p> 
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    
+
+        <footer class="text-gray-700 body-font">
+            <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+              <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+      
+                <span class="ml-3 text-xl" style="color: white;">Contact Us</span>
+              </a>
+              <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4"
+                style="color: white;">© 2020 TIT&S Computer Society
+              </p>
+              <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+                <a class="text-gray-500" href="https://www.facebook.com/tcstit" style="color: white;">
+                  <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+                    viewBox="0 0 24 24">
+                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                  </svg>
+                </a>
+      
+                <a class="ml-3 text-gray-500" href="https://www.instagram.com/tcs_society/" style="color: white;">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-5 h-5" viewBox="0 0 24 24">
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                  </svg>
+                </a>
+                <a class="ml-3 text-gray-500" style="color: white;"
+                  href="https://www.linkedin.com/company/t-i-t-s-computer-society">
+                  <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path stroke="none"
+                      d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                    <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                  </svg>
+                </a>
+              </span>
+            </div>
+          </footer>
+          </div>
+          <script src="./jquery.3.2.1.min.js"></script>
+          <script src="./popper.min.js"></script>
+          <script src="./bootstrap.min.js"></script>
+    </body>
+    <script>
+        $(window).scroll(function () {
+          $('nav').toggleClass('scrolled', $(this).scrollTop() > 120);
+        });
+      </script>
+      
+</html>

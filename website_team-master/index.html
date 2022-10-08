@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TCS</title>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link href="./bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="./styles.css" rel="stylesheet">
+  <link rel="icon" href="white on black.png" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Alice">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Fondamento">
+
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    input[type=text],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+
+    input[type=submit] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+
+    .contact_container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+      margin: 100px 200px;
+
+    }
+    .alert{
+      text-align: center;
+      padding: 10px;
+      background: #6a45c4;
+      color: yellow;
+      margin-bottom: 10px;
+      display: none;
+    } 
+
+    @media screen and (max-width: 1000px) {
+      .contact_container {
+        margin: 0px 0px;
+      }
+    }
+  </style>
+</head>
+
+<body id="id1">
+  <script type="text/javascript">
+    var arr = ['12.jpg', '3.jpg', '14.jpg', '13.jpg', '7.jpg', '5.jpg', '6.jpg', '1.jpg', '10.jpg', '4.jpg', '8.jpg', '9.jpg'];
+    var x = Math.floor(Math.random() * 12);
+    var str1 = "image/";
+    var final = str1.concat(arr[x]);
+
+    document.body.background = final;
+  </script>
+  <nav class="navbar sidebar-collapsed navbar-expand-lg sticky-top lineargradnt" id="navbar1">
+    <a id="logo" class="navbar-brand" style="color: white;" href="index.html"><img class="logo1"
+        src="White Transparent.png" alt="" loading="lazy"></a>
+    <button style="outline: unset;" id="btncol" class="navbar-toggler ml-auto hidden-sm-up float-xs-right"
+      style="float:right;" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+      <i style="color: white;" class="fa fa-bars"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto ">
+        <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            About Us
+          </a>
+          <div id="drp" class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" id="elee" href="about_us.html">Our Story</a>
+            <a class="dropdown-item" id="elee" href="mentors.html">Mentors</a>
+            <a class="dropdown-item" id="elee" href="TCS_Team.html">Members</a>
+            <a class="dropdown-item" id="elee" href="Postholders page.html">Post Holders</a>
+            <a class="dropdown-item" id="elee" href="alumni.html">Alumni</a>
+            <a class="dropdown-item" id="elee" href="developers.html">Developers</a>
+
+
+          </div>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="Gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="Placement.html">Placements</a></li>
+        <li class="nav-item"><a class="nav-link" href="Downloads.html">Downloads</a></li>
+        <!--<li class="nav-item"><a class="nav-link" href="event-register.html">Events</a></li>-->
+        <li class="nav-item">
+          <a href="event-register.html">
+            <button type="button" class="btn btn-outline-primary btn-sm mt-1">Event Registration</button>
+          </a>
+        </li> 
+      </ul>
+    </div>
+  </nav>
+  
+  <div class="container" style="text-align: center; color: white; padding-bottom: 10%; padding-top: 5%;">
+    <h1 id="greet" style="font-size: calc(2rem + 5vw); font-family: Sofia;">Hello, world!</h1>
+    <p style="font-family: 'Alice'; font-size: calc(1rem + 2vw); padding-top: 20px;" id="quote">"Everybody in this
+      country should
+      <br>learn how to program a
+      computer...<br>because it teaches you how to think."<br> -Steve Jobs</p>
+
+  </div>
+  <div class="container mx-auto">
+
+    <script>
+      var ar = ['Whether you want to uncover the secrets of the universe, or you just want to pursue a career in the 21st century, basic computer programming is an essential skill to learn.<br> -Stephen Hawking', "Everybody in this country should <br>learn how to program a computer...<br>because it teaches you how to think.<br> -Steve Jobs", "People can be really smart or have skills that are directly applicable, but if they don't really believe in it, then they are not going to really work hard.<br> -Mark Zukerberg", "On my business card, I am a corporate president. In my mind,<br> I am a game developer. But in my heart, I am a gamer.<br> -Satoru Iwata", "My number one piece of advice is: you should learn how to program.<br> -Mark Zukerberg", "The best investment you can make, is an investment in yourself...<br> The more you learn, the more you'll earn.<br> -Warren Buffett", "Coding is today's language of creativity. All our children<br>deserve a chance to become creators instead consumers of computer science.<br> -Maria Klawe", "AI is probably the most important thing humanity has ever worked on.<br> -Sundar Pichai", "People work better when they know what the goal is and why. It is important that people look forward to coming to work in the morning and enjoy working.<br> -Elon Musk", "Talk is cheap,<br>show me the code<br> -Linus Torvalds", "I taught myself how to program computers when I was a kid, bought my first computer when I was 10, and sold my first commercial program when I was 12.<br> -Elon musk"]
+      var y = Math.floor(Math.random() * 11);
+      document.getElementById("quote").innerHTML = ar[y];
+      var today = new Date();
+      var time = today.getHours();
+      var grt = "";
+      var gr = ["Good Morning!", "Good Noon!", "Good Evening!", "Hello World!"]
+      if (time < 5) {
+        grt = gr[3];
+      }
+      else if (time < 12) {
+        grt = gr[0];
+      }
+      else if (time < 17) {
+        grt = gr[1];
+      }
+      else {
+        grt = gr[2];
+      }
+      document.getElementById("greet").innerHTML = grt;
+    </script>
+
+
+    <section class="text-white body-font">
+      <div class="container px-5 py-24 mx-auto">
+        <h1 class="font-medium title-font text-center text-white mb-20"
+          style="font-size: calc(1rem + 2vw); font-family: 'Montserrat';">Society Goals</h1>
+        <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+          <div class="p-4 md:w-1/3 lg:w-1/3 md:mb-0 mb-6 flex">
+            <div
+              class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 flex-shrink-0">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                class="w-6 h-6" viewBox="0 0 24 24">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              </svg>
+            </div>
+            <div class="flex-grow pl-6">
+              <h2 class="text-white text-lg title-font  mb-2 glfont"
+                style="font-family: 'Alice'; font-size: calc(1rem + 2vw);">Presentation Expert</h2>
+              <p class="leading-relaxed text-base" style="font-family: 'Open Sans';">Presentations are the most
+                important aspect of the IT industry that
+                an intern should be skilled in and we look this skill as an important goal.</p>
+
+            </div>
+          </div>
+          <div class="p-4 md:w-1/3 lg:w-1/3 md:mb-0 mb-6 flex">
+            <div
+              class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 flex-shrink-0">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                class="w-6 h-6" viewBox="0 0 24 24">
+                <circle cx="6" cy="6" r="3"></circle>
+                <circle cx="6" cy="18" r="3"></circle>
+                <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+              </svg>
+            </div>
+            <div class="flex-grow pl-6">
+              <h2 class="text-white text-lg title-font font-medium mb-2 glfont"
+                style="font-family: 'Alice'; font-size: 3vw;">Skilled Resume</h2>
+              <p class="leading-relaxed text-base" style="font-family: 'Open Sans';">Making each member aware about the
+                technology prevailing in the IT
+                industry and helping them achieve those skills to fit in resume.</p>
+            </div>
+          </div>
+          <div class="p-4 md:w-1/3 lg:w-1/3 md:mb-0 mb-6 flex">
+            <div
+              class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 flex-shrink-0">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                class="w-6 h-6" viewBox="0 0 24 24">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <div class="flex-grow pl-6">
+              <h2 class="text-white text-lg title-font font-medium mb-2 glfont"
+                style="font-family: 'Alice'; font-size: 3vw;">Placement Ready</h2>
+              <p class="leading-relaxed text-base" style="font-family: 'Open Sans';">The ultimate Goal is to make an
+                individual ready for the Placement
+                that every student thrives for.</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="text-gray-900 body-font">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-wrap w-full mb-20">
+          <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white" style="font-family: 'Montserrat';">
+              Events
+            </h1>
+            <div class="h-1 w-20 bg-indigo-500 rounded"></div>
+          </div>
+          <p class="lg:w-1/2 w-full leading-relaxed text-white" style="font-family: 'Open Sans';">Events are the days of
+            celebration when the members come
+            together to show their team work and responsibility. The events that our society organizes are linked to
+            technology and the greatest engineering expertised inventions of computer engineers.</p>
+        </div>
+        <div class="flex flex-wrap -m-4">
+          <div class=" w-full xl:w-1/4 lg:w-1/4 md:w-1/2 sm:w-1/1 p-4 ">
+            <div class="bg-white p-6 rounded-lg ">
+              <a href="CodeWar.html"><img
+                  class="h-40 rounded w-full object-cover object-center mb-6 hover:shadow-outline"
+                  src="https://source.unsplash.com/1600x900/?code,python,Software" alt="content"></a>
+              <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Coding</h3>
+              <h2 class="text-lg text-gray-900 font-medium title-font mb-4">CODE WAR</h2>
+              <p class="leading-relaxed text-base">Code War is the annual coding event of the society and the winner
+                gets the tag of coder of the year on our website.</p>
+            </div>
+          </div>
+          <div class=" w-full xl:w-1/4 lg:w-1/4 md:w-1/2 sm:w-1/1 p-4">
+            <div class="bg-gray-100 p-6 rounded-lg">
+              <a href="Pubg.html"><img class="h-40 rounded w-full object-cover object-center mb-6 hover:shadow-outline"
+                  src="Gallery/pubg.jpg" alt="content"></a>
+              <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Gaming</h3>
+              <h2 class="text-lg text-gray-900 font-medium title-font mb-4">PubG</h2>
+              <p class="leading-relaxed text-base">PubG is the annual gaming event organised by our society in which the
+                winner can redeem the cash prize and t-shirts.</p>
+            </div>
+          </div>
+          <div class=" w-full xl:w-1/4 lg:w-1/4 md:w-1/2 sm:w-1/1 p-4">
+            <div class="bg-gray-100 p-6 rounded-lg">
+              <a href="Quates.html"><img
+                  class="h-40 rounded w-full object-cover object-center mb-6 hover:shadow-outline"
+                  src="https://source.unsplash.com/1600x900/?technology,Quiz" alt="content"></a>
+              <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Fun-Tech Quiz</h3>
+              <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Qates</h2>
+              <p class="leading-relaxed text-base">Qates is the fun-tech Quiz event of the society which is organised to
+                check the tech awareness of the students.</p>
+            </div>
+          </div>
+          <div class="w-full xl:w-1/4 lg:w-1/4 md:w-1/2 sm:w-1/1 p-4">
+            <div class="bg-gray-100 p-6 rounded-lg">
+              <a href="Slackware.html"><img
+                  class="h-40 rounded w-full object-cover object-center mb-6 hover:shadow-outline"
+                  src="https://source.unsplash.com/1600x900/?Workshops,teaching" alt="content"></a>
+              <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Workshop</h3>
+              <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Slackware</h2>
+              <p class="leading-relaxed text-base">Slackware is an exciting workshop that include making viruses, the
+                remote sensing of different devices and other exciting hacks.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="title123">
+      <section class="text-white body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-wrap -m-4">
+            <a href="Alumni/Mukul.html">
+              <div class="p-4 md:w-1/1">
+                <div class="h-full border-2 border-gray-200 rounded-lg overflow-hidden">
+                  <img class="lg:h-48 md:h-30 w-full object-cover object-center crimg" style="height: 400px; "
+                    src="Alumni/Alumni pic/Mukul.jpg" alt="blog">
+                  <div class="p-6">
+                    <h2 class="tracking-widest text-xs title-font font-medium text-white crtitle mb-1">Alumni</h2>
+                    <h1 class="title-font text-lg font-medium text-white mb-3 crname">Er. Mukul</h1>
+                    <p class="leading-relaxed mb-3 crfont" style="color: white;">He is currently working in Infosys
+                      Ltd., Pune as ServiceNow Developer.</p>
+
+
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="Alumni/Vikas.html">
+              <div class="p-4 md:w-1/1">
+                <div class="h-full border-2 border-gray-200 rounded-lg overflow-hidden">
+                  <img class="lg:h-48 md:h-36 w-full object-cover object-center crimg" style="height: 400px;"
+                    src="Alumni/Alumni pic/Vikas.jpg" alt="blog">
+                  <div class="p-6">
+                    <h2 class="tracking-widest text-xs title-font font-medium text-white crtitle mb-1">Alumni</h2>
+                    <h1 class="title-font text-lg font-medium text-white mb-3 crname">Er. Vikas Samota</h1>
+                    <p class="leading-relaxed mb-3 crfont" style="color: white;">He is currently working in MphRx Inc.
+                      as Software Developer.</p>
+
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="Alumni/Arun.html">
+              <div class="p-4 md:w-1/1">
+                <div class="h-full border-2 border-gray-200 rounded-lg overflow-hidden">
+                  <img class="lg:h-48 md:h-36 w-full object-cover object-center crimg" style="height: 400px;"
+                    src="Alumni/Alumni pic/Arun.jpg" alt="blog">
+                  <div class="p-6">
+                    <h2 class="tracking-widest text-xs title-font font-medium text-white crtitle mb-1">Alumni</h2>
+                    <h1 class="title-font text-lg font-medium text-white mb-3 crname">Er. Arun</h1>
+                    <p class="leading-relaxed mb-3 crfont" style="color:white;">He is currently working in Nagarro
+                      Software Pvt. Ltd. as Associate Engineer.</p>
+
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="title12">
+      <div class="container">
+        <div id="demo" class="carousel slide my-3" data-ride="carousel">
+          <!--Slideshow starts here -->
+          <div class="container carousel-inner no-padding">
+
+            <div class="carousel-item active">
+              <div class="col-3 col-sm-3 col-md-3">
+                <div class="card">
+                  <img src="Alumni/Alumni pic/Mukul.jpg" class="card-img-top image-card-height" alt="...">
+                  <div class="card-body card-body-height">
+                    <h5 class="card-title">Er. Mukul</h5>
+                    <p class="card-text"><br><b><i>"Tension nhi lene ka. Mauz Masti krne ka. Everything will turn out
+                          just fine! Just have confidence ... <a href="Alumni/Mukul.html">Know more</a></i></b></p>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-3 col-sm-3 col-md-3">
+                <div class="card">
+                  <img src="Alumni/Alumni pic/Vikas.jpg" class="card-img-top image-card-height" alt="...">
+                  <div class="card-body card-body-height">
+                    <h5 class="card-title">Er. Vikas</h5>
+                    <p class="card-text"><br><b><i>"I agree we never started this but we resurrect this society with new
+                          vision. Every member is key here and... <a href="Alumni/Vikas.html">Know more</a></i></b></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-3 col-sm-3 col-md-3">
+                <div class="card">
+                  <img src="Alumni/Alumni pic/Gaurav.jpg" class="card-img-top image-card-height" alt="...">
+                  <div class="card-body card-body-height">
+                    <h5 class="card-title">Er. Gaurav</h5>
+                    <p class="card-text"><br><b><i>"TCS society is one of my favourite society from college times and I
+                          had been pretty enthusiastic about the... <a href="Alumni/Gaurav.html">Know more</a></i></b>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-3 col-sm-3 col-md-3">
+                <div class="card">
+                  <img src="Alumni/Alumni pic/Pankaj Rohilla.jpg" class="card-img-top image-card-height" alt="...">
+                  <div class="card-body card-body-height">
+                    <h5 class="card-title">Er. Pankaj</h5>
+                    <p class="card-text"><br><b><i>"Study well, Enjoy your college days, Work Smarter, Be confident and
+                          Focus on your... <a href="Alumni/Pankaj Rohilla.html">Know more</a></i></b></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="carousel-item">
+              <div class="col-3 col-sm-3 col-md-3">
+                <div class="card">
+                  <img src="Alumni/Alumni pic/Himanshi Sharma.jpg" class="card-img-top image-card-height" alt="...">
+                  <div class="card-body card-body-height">
+                    <h5 class="card-title">Er. Himanshi</h5>
+                    <p class="card-text"><br><b><i>"Each day was full of life at college campus. From junior to senior
+                          and finally to...<a href="Alumni/Himanshi Sharma.html">Know more</a></i></b></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-3 col-sm-3 col-md-3">
+                <div class="card">
+                  <img src="Alumni/Alumni pic/Vibhor Malik.jpg" class="card-img-top image-card-height" alt="...">
+                  <div class="card-body card-body-height">
+                    <h5 class="card-title">Er. Vibhor</h5>
+                    <p class="card-text"><br><b><i>"Never trust a computer you can’t throw out a window.... <a
+                            href="Alumni/Vibhor Malik.html">Know more</a></i></b></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-3 col-sm-3 col-md-3">
+                <div class="card">
+                  <img src="Alumni/Alumni pic/Arun.jpg" class="card-img-top image-card-height" alt="...">
+                  <div class="card-body card-body-height">
+                    <h5 class="card-title">Er. Arun</h5>
+                    <p class="card-text"><br><b><i>"The more you know more you grow.... <a href="Alumni/Arun.html">Know
+                            more</a></i></b></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-3 col-sm-3 col-md-3">
+                <div class="card">
+                  <img src="Alumni/Alumni pic/Heena Sharma.jpg" class="card-img-top image-card-height" alt="...">
+                  <div class="card-body card-body-height">
+                    <h5 class="card-title">Er. Henna</h5>
+                    <p class="card-text"><br><b><i>"The function of good software is to make the complex appear to be...
+                          <a href="Alumni/Heena Sharma.html">Know more</a></i></b></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="col-3 col-sm-3 col-md-3">
+                <div class="card">
+                  <img src="Alumni/Alumni pic/d.jpg" class="card-img-top image-card-height" alt="...">
+                  <div class="card-body card-body-height">
+                    <h5 class="card-title">Er. Diksha</h5>
+                    <p class="card-text"><br><b><i> "You guys rock on every platform.
+                          #Keep growing
+                          #Keep learn...<a href="Alumni/Diksha Mehta.html">Know more</a></i></b></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-3 col-sm-3 col-md-3">
+                <div class="card">
+                  <img src="Alumni/Alumni pic/Vinisha.jpg" class="card-img-top image-card-height" alt="...">
+                  <div class="card-body card-body-height">
+                    <h5 class="card-title">Er. Vinisha</h5>
+                    <p class="card-text"><br><b><i>"Set a goal in your Life and work hard for it. The only way to
+                          survive in any IT Industry is to keep... <a href="Alumni/Vinisha Pathak.html">Know
+                            more</a></i></b></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-3 col-sm-3 col-md-3">
+                <div class="card">
+                  <img src="Alumni/Alumni pic/loki.jpg" class="card-img-top image-card-height" alt="...">
+                  <div class="card-body card-body-height">
+                    <h5 class="card-title">Er. Lokesh</h5>
+                    <p class="card-text"><br><b><i>"TCS in my life has been a ladder to the success. It taught me how to
+                          work with everyone in order to show our best result.... <a
+                            href="Alumni/Lokesh Singal.html">Know more</a></i></b></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-3 col-sm-3 col-md-3">
+                <div class="card">
+                  <img src="Alumni/Alumni pic/Abhilaksh.jpg" class="card-img-top image-card-height" alt="...">
+                  <div class="card-body card-body-height">
+                    <h5 class="card-title">Er. Abhilaksh</h5>
+                    <p class="card-text"><br><b><i>"Work daily and enjoy.
+                          Stay focused on your goal...<br> <a href="Alumni/Abhilaksh.html">Know more</a></i></b></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- left and right controls for the slide -->
+
+
+
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-dark1">
+            <h5 class="modal-title" id="staticBackdropLabel" style="color:white;">Event Registration Form</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" style="color:white;">&times;</span>
+            </button>
+          </div>
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="regitseform mt-20 mb-2">
+    <div class="jumbotron jumbotron-fluid jumbo" style="background-color: rgba(0,0,0,0.3);">
+      <div class="container">
+        <div class="row">
+          <div class='col-12'>
+            <h1 class="display-4 text-center"
+              style="color: white; font-size: calc(2rem + 2vw) !important; font-family: 'Montserrat';">Contact Us</h1>
+            <br>
+          </div>
+          <div class=" col-md-5 contactform">
+            <div class="text-center mt-4 mx-4">
+              <h4 class="title"></h4>
+              <p></p>
+              <div class="row">
+                <div class="col-4 center-block text-center" style="padding-left: 20px;">
+                  <a href="https://titsbhiwani.ac.in/">
+                    <img src="tit-logo.png" alt="" style="height: inherit; width: auto;">
+                  </a>
+                </div>
+                <div class="col-8 ">
+                  <a href="https://titsbhiwani.ac.in/" style="color: white; font-family: 'Open Sans';">
+                    <p><strong>The Technological Institute of Textile &amp; Sciences</strong><br>Birla Colony, Bhiwani –
+                      Haryana 127021<br><strong>01664-242561-64</strong></p>
+                  </a>
+                  <p></p>
+                </div>
+
+              </div>
+              <a
+                href="https://www.google.com/maps/place/TIT%26S+COLLEGE/@28.8049875,76.1178172,17z/data=!3m1!4b1!4m5!3m4!1s0x3912673b51f16f51:0x8150d39b465bc17c!8m2!3d28.8049828!4d76.1200059">
+              <img src="map.png" alt=""></a>
+            </div>
+          </div>
+          <div class="col-12  col-md-7">
+            <div class="container">
+              <h4 style="color: white;">Ask a question</h3>
+                <div class="alert">Your message has been sent.</div>
+                <form id="contactform">
+                  <div class=" row">
+                    <div class="col-6">
+                      <input type="text" id="name" name="name" placeholder="Your Name.." required>
+                    </div>
+                    <div class="col-6">
+                      <select id="category" name="category" style="background-color: white;" placeholder="Choose" required>
+                        <option value="" disabled selected hidden >Select your option</option>
+                        <option value="first">Student</option>
+                        <option value="nontitian">Non - TITIAN</option>
+                        <option value="alumni">Alumni</option>
+                      </select>
+
+                    </div>
+                    <div class="col-12">
+                      <input type="text" id="email" name="email" placeholder="Your email id.." required>
+                    </div>
+                    <div class="col-12">
+                      <textarea id="message" name="message" placeholder="Your query here..." style="height:120px"
+                        required></textarea>
+                      <div class="text-center align-middle">
+                        <input type="submit" value="Send" style="text-align: center; width: 200px; font-size: 1rem;">
+                      </div>
+                    </div>
+                  </div>
+
+                </form>
+            </div>
+          </div>
+
+          <br>
+          <div class="col-12 text-center mt-4">
+            <a class="ml-3 text-gray-500 mr-3 " href="mailto:tcs.tit@gmail.com?subject=" style="color: white;">
+              <i class="fa fa-2x fa-google-plus" aria-hidden="true" style="color: white;"></i>
+            </a>
+            <a class="text-gray-500" href="https://www.facebook.com/tcstit" style="color: white;">
+              <i class="fa fa-2x fa-facebook" aria-hidden="true" style="color: white;"></i>
+            </a>
+
+            <a class="ml-3 text-gray-500" href="https://www.instagram.com/tcs_society/" style="color: white;">
+              <i class="fa fa-2x fa-instagram" aria-hidden="true" style="color: white;"></i>
+            </a>
+            <a class="ml-3 text-gray-500" style="color: white;"
+              href="https://www.linkedin.com/company/t-i-t-s-computer-society">
+              <i class="fa fa-2x fa-linkedin" aria-hidden="true" style="color: white;"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  </div>
+  </div>
+  <script src="./jquery.3.2.1.min.js"></script>
+  <script src="./popper.min.js"></script>
+  <script src="./bootstrap.min.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyArPUCpE5mFsv2RE4yb-DQpZ50Y4kMKMbE",
+      authDomain: "tcsproject-7ad86.firebaseapp.com",
+      databaseURL: "https://tcsproject-7ad86.firebaseio.com",
+      projectId: "tcsproject-7ad86",
+      storageBucket: "tcsproject-7ad86.appspot.com",
+      messagingSenderId: "1085382243022",
+      appId: "1:1085382243022:web:1c3152da751c0fae08969f",
+      measurementId: "G-94F725FZZC"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+
+  </script>
+   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+   <script defer src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+   <script src="forms/main.js" ></script>
+</body>
+
+<script>
+  $(window).scroll(function () {
+    $('nav').toggleClass('scrolled', $(this).scrollTop() > 120);
+  });
+</script>
+
+
+</html>

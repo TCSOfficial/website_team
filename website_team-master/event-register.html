@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TCS</title>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link href="./bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="./styles.css" rel="stylesheet">
+  <link rel="icon" href="white on black.png" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Alice">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Fondamento">
+
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    input[type=text],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+
+    input[type=submit] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+
+    .contact_container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+      margin: 100px 200px;
+
+    }
+    .alert{
+      text-align: center;
+      padding: 10px;
+      background: #6a45c4;
+      color: yellow;
+      margin-bottom: 10px;
+      display: none;
+    }
+
+    @media screen and (max-width: 1000px) {
+      .contact_container {
+        margin: 0px 0px;
+      }
+    }
+    *, ::after, ::before {
+    box-sizing: border-box;
+    padding: 1px;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e2e8f0;
+  </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body id="id1">
+  <script type="text/javascript">
+    var arr = ['12.jpg', '3.jpg', '14.jpg', '13.jpg', '7.jpg', '5.jpg', '6.jpg', '1.jpg', '10.jpg', '4.jpg', '8.jpg', '9.jpg'];
+    var x = Math.floor(Math.random() * 12);
+    var str1 = "image/";
+    var final = str1.concat(arr[x]);
+
+    document.body.background = final;
+  </script>
+  <nav class="navbar sidebar-collapsed navbar-expand-lg sticky-top lineargradnt" id="navbar1">
+    <a id="logo" class="navbar-brand" style= "color: white;" href="index.html"><img class="logo1"
+        src="White Transparent.png" alt="" loading="lazy"></a>
+    <button style="outline: unset;" id="btncol" class="navbar-toggler ml-auto hidden-sm-up float-xs-right"
+      style="float:right;" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+      <i style="color: white;" class="fa fa-bars"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto ">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            About Us
+          </a>
+          <div id="drp" class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" id="elee" href="about_us.html">Our Story</a>
+            <a class="dropdown-item" id="elee" href="mentors.html">Mentors</a>
+            <a class="dropdown-item" id="elee" href="TCS_Team.html">Members</a>
+            <a class="dropdown-item" id="elee" href="Postholders page.html">Post Holders</a>
+            <a class="dropdown-item" id="elee" href="alumni.html">Alumni</a>
+            <a class="dropdown-item" id="elee" href="developers.html">Developers</a>
+    
+
+          </div>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="Gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="Placement.html">Placements</a></li>
+        <li class="nav-item"><a class="nav-link" href="Downloads.html">Downloads</a></li>
+        <li class="nav-item active:bg-blue-700">
+          <a href="event-register.html" active>
+            <button type="button" class="btn btn-primary btn-sm mt-1" active>Event Registration</button>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container mx-auto">
+
+   
+
+
+    
+    
+    
+
+
+
+
+
+    <!-- left and right controls for the slide -->
+
+
+
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-dark1">
+            <h5 class="modal-title" id="staticBackdropLabel" style="color:white;">Event Registration Form</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" style="color:white;">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+           
+          </div>
+
+        </div>
+      </div>
+    </div>
+    </div>
+  <div class= "registerform">
+    <div class="jumbotron jumbotron-fluid my-4 bg-transparent">
+      <div class="container">
+        <div class="row">
+          <div class='col-12'>
+        <h1 class="display-4 text-center"  style="color: white; font-size: 60px !important;">TCS Recruitment 2k20</h1>
+      </div>
+      <div class="col-1 col-md-4" >
+
+        <!-- <img src="image\recruitment.png" alt="" style="height: 400px;width: 500px;"> -->
+
+      </div>
+        <div class="col-10 col-md-4 mt-1 mb-3" >
+
+          <img src="image\recruitment.jpeg" alt="" style="height: 400px;width: 500px;">
+<!-- <hr> -->
+        </div>
+        <div class="col-1 col-md-4" >
+
+          <!-- <img src="image\recruitment.png" alt="" style="height: 400px;width: 500px;"> -->
+  
+        </div>
+       
+      <div class="col-12"  >
+        <div class= "container" style="background-color: black; border-radius: 25px;">
+          <h4 style="color: white;" >Recruitment 2k20</h3>
+      
+            <div class="container">
+        
+              <!-- <form id="registerform">
+
+                <label  style="color: white;">Name</label>
+                <input type="text" class="form-control" id="name" placeholder=""  required=>
+            
+                <div class='mt-2'>
+                  <label for="collegeid" style="color: white;">College ID</label>
+                  <input type="text" class="form-control" id="collegeid" placeholder="" value="" required="">
+                </div>
+
+                <div class='mt-2' style="color: white;">
+                  <label for="phone " style="color: white;">Mobile No.</label>
+                  <input type="text" class="form-control" id="phone" placeholder="" value="" required="">
+                </div>
+                <div class='mt-2' style="color: white;">
+                  <label for="email">Email address</label>
+                  <input type="text" class="form-control" id="email" aria-describedby="emailHelp"
+                    required="">
+                </div>
+               <div class='mt-2' style="color: white;">
+                  <label for="laptop " style="color: white;">Do you have Laptop? </label>
+                  <input type="text" class="form-control" id="laptop" placeholder="" value="" required="">
+                </div>
+                <div class='mt-2' style="color: white;">
+                  <label for="ppt " style="color: white;">Do you know how to make Power Point Presentation? </label>
+                  <input type="text" class="form-control" id="ppt" placeholder="" value="" required=""> 
+                </div> 
+                <div class='mt-2'> 
+                  <label for="bye" style="color: white;">bye</label>
+                  <input type="text" class="form-control" id="bye" placeholder="" value="" required="">
+                </div>
+
+                <div class='mt-2' style="color: white;">
+                  <label for="hello" style="color: white;">hello</label>
+                  <input type="text" class="form-control" id="hello" placeholder="" value="" required="">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <br>
+              </form> -->
+              <form id="contactForm">
+                <p>
+                  <label style="color: white;">Name</label>
+                  <input type="text" name="name" id="name" required>
+                </p>
+                <p>
+                  <label style="color: white;">CollegeId</label>
+                  <input type="text" name="company" id="company" required>
+                </p>
+                <p>
+                  <label style="color: white;">Email Address</label>
+                  <br>
+                  <input type="email" name="email" id="email" style="width: 100%;
+                  padding: 12px;
+                  border: 1px solid #ccc;
+                  border-radius: 4px;
+                  box-sizing: border-box;
+                  margin-top: 6px;
+                  margin-bottom: 16px;
+                  resize: vertical;" required>
+                </p>
+                <p>
+                  <label style="color: white;">Whatsapp Number</label>
+                  <input type="tel" name="phone" id="phone" pattern="[789][0-9]{9}" style="width: 100%;
+                  padding: 12px;
+                  border: 1px solid #ccc;
+                  border-radius: 4px;
+                  box-sizing: border-box;
+                  margin-top: 6px;
+                  margin-bottom: 16px;
+                  resize: vertical;"required>
+                </p>
+                <p>
+                  <label style="color: white;">Do you have Laptop? Yes/No</label>
+                  <input type="text" name="message" id="message" required>
+                </p>
+                <p>
+                  <label style="color: white;">Do you know how to make Powerpoint Presentation? Yes/No</label>
+                  <input type="text" name="message1" id="message1" required>
+                </p>
+                <div class="alert">Your are successfully registered.</div>
+                <div class="row">
+                <div class="col-12 mx-auto text-center">
+                <p class="full">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </p>
+              </div>
+              </div>
+              <p></p>
+              </form>
+              <!-- <div class="jumbotron">
+                <h1>Recruitment 2k20</h1>
+                <p class="lead"></p>
+                <a class="btn btn-lg btn-primary" href="https://forms.gle/DmYSoW35DDYCaGM37" role="button">View navbar docs »</a>
+              </div>  -->
+            </div>
+        </div>
+        <!-- <div class="container">
+          <h1 class="brand"><span>Acme</span> Web Design</h1>
+          <div class="wrapper">
+            <div class="company-info">
+              <h3>Acme Web Design</h3>
+              <ul>
+                <li><i class="fa fa-road"></i> 44 Something st</li>
+                <li><i class="fa fa-phone"></i> (555) 555-5555</li>
+                <li><i class="fa fa-envelope"></i> test@acme.test</li>
+              </ul>
+            </div>
+            <div class="contact">
+              <h3>Email Us</h3>
+              <div class="alert">Your message has been sent</div>
+              <form id="contactForm">
+                <p>
+                  <label>Name</label>
+                  <input type="text" name="name" id="name" required>
+                </p>
+                <p>
+                  <label>Company</label>
+                  <input type="text" name="company" id="company">
+                </p>
+                <p>
+                  <label>Email Address</label>
+                  <input type="email" name="email" id="email" required>
+                </p>
+                <p>
+                  <label>Phone Number</label>
+                  <input type="text" name="phone" id="phone">
+                </p>
+                <p class="full">
+                  <label>Message</label>
+                  <textarea name="message" rows="5" id="message"></textarea>
+                </p>
+                <p class="full">
+                  <button type="submit">Submit</button>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div> -->
+        </div>
+        <div class="col-12 text-center mt-4">
+            <a class="ml-3 text-gray-500 mr-3 " href="mailto:tcs.tit@gmail.com?subject=" style="color: white;">
+          <i class="fa fa-2x fa-google-plus" aria-hidden="true" style="color: white;"></i>
+            </a>
+          <a class="text-gray-500" href="https://www.facebook.com/tcstit" style="color: white;">
+            <i class="fa fa-2x fa-facebook" aria-hidden="true" style="color: white;"></i>
+          </a>
+
+          <a class="ml-3 text-gray-500" href="https://www.instagram.com/tcs_society/" style="color: white;">
+            <i class="fa fa-2x fa-instagram" aria-hidden="true" style="color: white;"></i>
+          </a>
+          <a class="ml-3 text-gray-500" style="color: white;"
+            href="https://www.linkedin.com/company/t-i-t-s-computer-society">
+            <i class="fa fa-2x fa-linkedin" aria-hidden="true" style="color: white;"></i>
+          </a>
+    </div>
+  </div>
+    </div>
+  </div>
+</div>
+<div class="contactform1">
+  <div class="container">
+  </div>
+  <footer class="text-gray-700 body-font">
+    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+        <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+
+            <span class="ml-3 text-xl" style="color: white;">Contact Us</span>
+        </a>
+        <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4"
+            style="color: white;">© 2020 TIT&S Computer Society
+        </p>
+        <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+            <a class="text-gray-500" href="https://www.facebook.com/tcstit" style="color: white;">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+            </a>
+
+            <a class="ml-3 text-gray-500" href="https://www.instagram.com/tcs_society/" style="color: white;">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                </svg>
+            </a>
+            <a class="ml-3 text-gray-500" style="color: white;"
+                href="https://www.linkedin.com/company/t-i-t-s-computer-society">
+                <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path stroke="none"
+                        d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                    </path>
+                    <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                </svg>
+            </a>
+        </span>
+    </div>
+</footer>
+</div>
+  </div>
+    <script src="./jquery.3.2.1.min.js"></script>
+    <script src="./popper.min.js"></script>
+    <script src="./bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+<script src="forms/register.js" ></script>
+
+</body>
+
+<script>
+  $(window).scroll(function () {
+    $('nav').toggleClass('scrolled', $(this).scrollTop() > 120);
+  });
+</script>
+
+
+</html>
